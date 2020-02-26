@@ -1,0 +1,4 @@
+proftpd.crt
+proftpd.key
+ftpuser/
+.vscode/

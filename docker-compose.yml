@@ -5,9 +5,9 @@ services:
         build:
             context: .
             dockerfile: ./Dockerfile
-            args:
-                USER_ID: 1000
-                GROUP_ID: 1000
+            # args:
+            #     USER_ID: 1000
+            #     GROUP_ID: 1000
         container_name: debian_proftpd
         network_mode: bridge
         # restart: always

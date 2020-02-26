@@ -16,7 +16,10 @@ sudo chown 1000:nogroup ftpuser # you may want to use your debian user name inst
 or let `docker-compose up` create it and then change the owner `sudo chown 1000:nogroup -R ./ftpuser`
 
 ## bring up
+
+```shell
 docker-compose up -d
+```
 
 ## runtime reload config
 
