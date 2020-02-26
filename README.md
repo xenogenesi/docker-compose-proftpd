@@ -24,7 +24,7 @@ docker-compose up -d
 ## runtime reload config
 
 ```shell
-kill -HUP 1
+kill -HUP 1 # from within the running instance
 docker exec -ti debian_proftpd bash -c 'kill -HUP 1'
 ```
 
