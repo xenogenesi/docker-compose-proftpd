@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+    debian-proftpd:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+            args:
+                USER_ID: 1000
+                GROUP_ID: 1000
+        container_name: debian_proftpd
+        network_mode: bridge
+        # restart: always
+        ports:
+            - 0.0.0.0:20:20
+            - 0.0.0.0:21:21
+            - 21100-21110:21100-21110
+        volumes:
+            - ./proftpd.conf:/etc/proftpd/proftpd.conf
+            - ./tls.conf:/etc/proftpd/tls.conf
+            - ./proftpd.crt:/etc/ssl/certs/proftpd.crt
+            - ./proftpd.key:/etc/ssl/private/proftpd.key
+            - ./ftpuser:/home/ftpuser
+            # - ./modules.conf:/etc/proftpd/modules.conf
