@@ -25,7 +25,7 @@ docker-compose up -d
 
 ```shell
 kill -HUP 1
-docker exec -ti debian_proftpd bash -c 'kill -HUP 1`
+docker exec -ti debian_proftpd bash -c 'kill -HUP 1'
 ```
 
 ## lftp connection
